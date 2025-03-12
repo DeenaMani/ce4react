@@ -95,6 +95,7 @@ export default {
       allowedHosts: 'all',
     open: true, // Automatically open browser
     hot: true, // Enable Hot Module Replacement
+    historyApiFallback: true,
   },
   mode: 'development', // Use development mode for better debugging
 };
