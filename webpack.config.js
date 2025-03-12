@@ -52,6 +52,7 @@
 // };
 
 import path from 'path';
+/* const HtmlWebpackPlugin = require('html-webpack-plugin'); */
 
 export default {
   entry: './app/Views/src/index.js', // Entry point for your JavaScript
@@ -85,7 +86,13 @@ export default {
     alias: {
       '@': path.resolve('app/Views/src'), // Alias to simplify imports
     },
+    extensions: ['.js', '.jsx'], // Support both JS and JSX files
   },
+/*   plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // Path to the template HTML file
+    }),
+  ], */
   devServer: {
     static: path.resolve('public'),
       port: 3000,
@@ -98,4 +105,5 @@ export default {
     historyApiFallback: true,
   },
   mode: 'development', // Use development mode for better debugging
+  // watch: true,
 };

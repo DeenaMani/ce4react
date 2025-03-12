@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import Contact from './pages/Contact.js';
+import Header from './components/header.js';
+import Footer from './components/footer.js';
+import Home from './pages/home.js';
+import About from './pages/about.js';
+import Contact from './pages/contact.js';
 
 const CurrentRoute = () => {
   const location = useLocation();
@@ -19,9 +19,9 @@ const App = () => {
         <main>
           <CurrentRoute /> {/* Display current route */}
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/php/codeigniter/sample/" element={<Home />} />
+            <Route path="/php/codeigniter/sample/about" element={<About />} />
+            <Route path="/php/codeigniter/sample/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
